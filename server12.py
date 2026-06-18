@@ -2424,7 +2424,7 @@ async def start_background_web_server():
     except Exception as e:
         logger.error(f"خطا در اجرای وب‌سرور پس‌زمینه: {e}")
     
-asyncasync def main():
+async def main():
     logger.info("تلاش برای بارگذاری متغیرهای محیطی...")
     room_id = os.getenv("ROOM_ID", "68e771922d585712212e8070")
     api_token = os.getenv("API_TOKEN", "9a089b7f9bb1f38a943a6add2af7e1823a709e51119a7f9c7f870b443bb8c4cc")
@@ -2438,24 +2438,15 @@ asyncasync def main():
 
     bot_def = BotDefinition(room_id=room_id, api_token=api_token, bot=AdvancedBot())
     
-    # تعریف تابع اجرای بات برای استفاده در gather
-    async def run_bot():
-        max_reconnect_attempts = 5
-        attempt = 0
-        while attempt < max_reconnect_attempts:
-            try:
-                logger.info("تلاش برای اتصال به سرور Highrise...")
-                from highrise.__main__ import main as highrise_main
-                await highrise_main([bot_def])
-            except aiohttp.client_exceptions.ClientConnectionResetError as e:
-                logger.error(f"اتصال WebSocket قطع شد: {e}")
-                await bot_def.bot.cleanup_tasks()
-                attempt += 1
-                await sleep(5)
-
-    # 🌟 کلید حل مشکل: اجرای کاملاً همزمان وب‌سرور و ربات بدون بلاک کردن یکدیگر
-    import asyncio
-    await asyncio.gather(
-        start_background_web_server(),
-        run_bot()
-    )
+    max_reconnect_attempts = 5
+    attempt = 0
+    while attempt < max_reconnect_attempts:
+        try:
+            logger.info("تلاش برای اتصال به سرور Highrise...")
+            from highrise.__main__ import main as highrise_main
+            await highrise_main([bot_def])
+        except aiohttp.client_exceptions.ClientConnectionResetError as e:
+            logger.error(f"اتصال WebSocket قطع شد: {e}")
+            await bot_def.bot.cleanup_tasks()
+            attempt += 1
+            await sleep(5)

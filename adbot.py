@@ -2424,25 +2424,57 @@ async def start_background_web_server():
     except Exception as e:
         logger.error(f"خطا در اجرای وب‌سرور پس‌زمینه: {e}")
     
-def main():
-    # اجرای وب‌سرور در یک Thread جداگانه برای زنده ماندن رندر
-    import threading
-    server_thread = threading.Thread(target=run_web_server, daemon=True)
-    server_thread.start()
+async def main():
+    # خواندن متغیرها مستقیماً از پنل رندر (نسخه اصلاح شده بدون get_env)
+    room_id = os.getenv("ROOM_ID", "678e7c1eb8d7f7639ba96f3a")
+    api_token = os.getenv("API_TOKEN", "")
 
-    # خواندن متغیرها از پنل رندر
-    room_id = os.getenv("ROOM_ID")
-    api_token = os.getenv("API_TOKEN")
-
-    if not room_id or not api_token:
-        logger.error("❌ متغیرهای ROOM_ID یا API_TOKEN در رندر تنظیم نشده‌اند!")
+    if not api_token:
+        logger.error("❌ خطای بحرانی: متغیر API_TOKEN در پنل رندر تنظیم نشده است!")
         return
 
-    logger.info(f"🚀 در حال راه‌اندازی ربات برای روم: {room_id}")
-    
-    # 🚀 اجرای دقیق و استاندارد ربات (مطابق با تعداد آرگومان‌های درخواستی پایتون)
-    bot_instance = AdvancedBot()
-    bot_instance.run(room_id, api_token)
+    import threading
+    def run_web_server():
+        try:
+            from flask import Flask
+            app = Flask(__name__)
+            @app.route('/')
+            def home(): return "Bot is running live!"
+            port = int(os.getenv("PORT", 8080))
+            app.run(host='0.0.0.0', port=port)
+        except Exception as e:
+            logger.error(f"خطا در اجرای وب‌سرور پس‌زمینه: {e}")
 
-if __name__ == "__main__":
-    main()
+    # اجرای وب‌سرور در یک نخ کاملاً جداگانه برای جلوگیری از فریز شدن
+    web_thread = threading.Thread(target=run_web_server, daemon=True)
+    web_thread.start()
+
+    # تنظیم مدیریت خطای جهانی برای asyncio تا هیچ تسکی ربات را کرش نکند
+    def handle_exception(loop, context):
+        msg = context.get("exception", context["message"])
+        logger.error(f"یک تسک پس‌زمینه با خطا مواجه شد اما مهار شد: {msg}")
+
+    try:
+        loop = asyncio.get_running_loop()
+        loop.set_exception_handler(handle_exception)
+    except Exception as le:
+        logger.error(f"خطا در تنظیم exception handler: {le}")
+
+    # اجرای استاندارد با ساختار اصلی و دنس‌های خودت
+    bot_def = BotDefinition(room_id=room_id, api_token=api_token, bot=AdvancedBot())
+    
+    max_reconnect_attempts = 10
+    attempt = 0
+    while attempt < max_reconnect_attempts:
+        try:
+            logger.info(f"تلاش برای اتصال به سرور Highrise در روم: {room_id}")
+            from highrise.__main__ import main as highrise_main
+            await highrise_main([bot_def])
+        except Exception as e:
+            logger.error(f"اتصال WebSocket قطع شد یا خطا داد: {e}")
+            try:
+                await bot_def.bot.cleanup_tasks()
+            except Exception:
+                pass
+            attempt += 1
+            await asyncio.sleep(5)

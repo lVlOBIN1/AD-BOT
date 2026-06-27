@@ -768,7 +768,8 @@ class AdvancedBot(BaseBot):
             "relaxing": "idle-floorsleeping2",
             "attention": "emote-salute",
             "floss": "dance-floss",
-            "rest": "idle-loop-sitfloor"
+            "rest": "idle-rest",
+            "sit": "idle-loop-sitfloor"
             
         }
 

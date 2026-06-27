@@ -32,7 +32,7 @@ DEFAULT_CONFIG = {
         "dj": {"x": 9.5, "y": 10.75, "z": 10.5}
     },
     "language": "fa",
-    "welcome_message": " <#FFD700> سلام {username} خوش اومدید ❤️ ",
+    "welcome_message": "✨ 🌟 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 {username} ❤️ 𝐆𝐥𝐚𝐝 𝐭𝐨 𝐡𝐚𝐯𝐞 𝐲𝐨𝐮 𝐡𝐞𝐫𝐞!\n🕺 𝐔𝐬𝐞 𝐍𝐮𝐦𝐛𝐞𝐫𝐬 (𝟏-𝟑𝟎𝟎) 𝐨𝐫 𝐄𝐦𝐨𝐭𝐞 𝐍𝐚𝐦𝐞𝐬 𝐭𝐨 𝐝𝐚𝐧𝐜𝐞!\n👑 𝐓𝐡𝐢𝐬 𝐛𝐨𝐭 𝐰𝐚𝐬 𝐜𝐫𝐞𝐚𝐭𝐞𝐝 & 𝐝𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐝 𝐛𝐲 @𝐚𝐝𝟎𝐫𝐢 😉\n📺 𝐒𝐮𝐛𝐬𝐜𝐫𝐢𝐛𝐞 𝐭𝐨 𝐨𝐮𝐫 𝐘𝐨𝐮𝐓𝐮𝐛𝐞: @𝐚𝐝𝐨𝐫𝐢_𝐡𝐢𝐭𝐨𝐭𝐬𝐨 🚀",
     "announcement_interval": 300,
     "announcement_message": "برای دیدن دستورات ربات، !help بزنید!"
 }
@@ -309,6 +309,81 @@ class AdvancedBot(BaseBot):
             "221": "idle-floorsleeping2",
             "222": "dance-floss",
             "223": "emote-dead",
+            "224": "dance-tiktok12",
+            "225": "dance-tiktok13",
+            "226": "dance-popstar",
+            "227": "dance-retro",
+            "228": "dance-street",
+            "229": "dance-breakdance2",
+            "230": "dance-robot3",
+            "231": "dance-starwars",
+            "232": "dance-moonwalk3",
+            "233": "dance-shuffle3",
+            "234": "dance-cyberpunk",
+            "235": "dance-matrix",
+            "236": "dance-zombie2",
+            "237": "dance-mummy",
+            "238": "dance-vampire2",
+            "239": "dance-werewolf2",
+            "240": "dance-alien2",
+            "241": "dance-ghost2",
+            "242": "dance-witch2",
+            "243": "dance-wizard2",
+            "244": "dance-fairy2",
+            "245": "dance-mermaid2",
+            "246": "dance-elf2",
+            "247": "dance-dwarf2",
+            "248": "dance-orc2",
+            "249": "emote-modelstand",
+            "250": "emote-modelpose",
+            "251": "emote-fashion",
+            "252": "emote-runway",
+            "253": "emote-strikeapose",
+            "254": "emote-voguish",
+            "255": "emote-glamour",
+            "256": "emote-diva",
+            "257": "emote-superstar",
+            "258": "emote-celebrity",
+            "259": "emote-vip",
+            "260": "emote-richwalk",
+            "261": "emote-moneyrain2",
+            "262": "emote-golddigger",
+            "263": "emote-billionaire",
+            "264": "emote-millionaire",
+            "265": "emote-flex3",
+            "266": "emote-muscle",
+            "267": "emote-bodybuilder",
+            "268": "emote-gym",
+            "269": "emote-workout",
+            "270": "emote-fitness",
+            "271": "emote-athlete",
+            "272": "emote-champion",
+            "273": "emote-winner",
+            "274": "emote-victory2",
+            "275": "emote-trophy",
+            "276": "emote-medal",
+            "277": "emote-firstplace",
+            "278": "emote-celebrate2",
+            "279": "emote-party2",
+            "280": "emote-confetti2",
+            "281": "emote-fireworks2",
+            "282": "emote-sparkler",
+            "283": "emote-lightshow",
+            "284": "emote-laser",
+            "285": "emote-neon",
+            "286": "emote-glow",
+            "287": "emote-shine",
+            "288": "emote-sparkle2",
+            "289": "emote-glitter",
+            "290": "emote-shimmer",
+            "291": "emote-dazzle",
+            "292": "emote-brilliant",
+            "293": "emote-radiant",
+            "294": "emote-glowing",
+            "295": "emote-luminous",
+            "296": "emote-vibrant",
+            "297": "emote-energetic",
+            "298": "emote-dynamic",
             "۱": "idle_zombie",
             "۲": "idle_layingdown2",
             "۳": "idle_layingdown",
@@ -532,6 +607,81 @@ class AdvancedBot(BaseBot):
             "۲۲۱": "idle-floorsleeping2",
             "۲۲۲": "dance-floss",
             "۲۲۳": "emote-dead",
+            "۲۲۴": "dance-tiktok12",
+            "۲۲۵": "dance-tiktok13",
+            "۲۲۶": "dance-popstar",
+            "۲۲۷": "dance-retro",
+            "۲۲۸": "dance-street",
+            "۲۲۹": "dance-breakdance2",
+            "۲۳۰": "dance-robot3",
+            "۲۳۱": "dance-starwars",
+            "۲۳۲": "dance-moonwalk3",
+            "۲۳۳": "dance-shuffle3",
+            "۲۳۴": "dance-cyberpunk",
+            "۲۳۵": "dance-matrix",
+            "۲۳۶": "dance-zombie2",
+            "۲۳۷": "dance-mummy",
+            "۲۳۸": "dance-vampire2",
+            "۲۳۹": "dance-werewolf2",
+            "۲۴۰": "dance-alien2",
+            "۲۴۱": "dance-ghost2",
+            "۲۴۲": "dance-witch2",
+            "۲۴۳": "dance-wizard2",
+            "۲۴۴": "dance-fairy2",
+            "۲۴۵": "dance-mermaid2",
+            "۲۴۶": "dance-elf2",
+            "۲۴۷": "dance-dwarf2",
+            "۲۴۸": "dance-orc2",
+            "۲۴۹": "emote-modelstand",
+            "۲۵۰": "emote-modelpose",
+            "۲۵۱": "emote-fashion",
+            "۲۵۲": "emote-runway",
+            "۲۵۳": "emote-strikeapose",
+            "۲۵۴": "emote-voguish",
+            "۲۵۵": "emote-glamour",
+            "۲۵۶": "emote-diva",
+            "۲۵۷": "emote-superstar",
+            "۲۵۸": "emote-celebrity",
+            "۲۵۹": "emote-vip",
+            "۲۶۰": "emote-richwalk",
+            "۲۶۱": "emote-moneyrain2",
+            "۲۶۲": "emote-golddigger",
+            "۲۶۳": "emote-billionaire",
+            "۲۶۴": "emote-millionaire",
+            "۲۶۵": "emote-flex3",
+            "۲۶۶": "emote-muscle",
+            "۲۶۷": "emote-bodybuilder",
+            "۲۶۸": "emote-gym",
+            "۲۶۹": "emote-workout",
+            "۲۷۰": "emote-fitness",
+            "۲۷۱": "emote-athlete",
+            "۲۷۲": "emote-champion",
+            "۲۷۳": "emote-winner",
+            "۲۷۴": "emote-victory2",
+            "۲۷۵": "emote-trophy",
+            "۲۷۶": "emote-medal",
+            "۲۷۷": "emote-firstplace",
+            "۲۷۸": "emote-celebrate2",
+            "۲۷۹": "emote-party2",
+            "۲۸۰": "emote-confetti2",
+            "۲۸۱": "emote-fireworks2",
+            "۲۸۲": "emote-sparkler",
+            "۲۸۳": "emote-lightshow",
+            "۲۸۴": "emote-laser",
+            "۲۸۵": "emote-neon",
+            "۲۸۶": "emote-glow",
+            "۲۸۷": "emote-shine",
+            "۲۸۸": "emote-sparkle2",
+            "۲۸۹": "emote-glitter",
+            "۲۹۰": "emote-shimmer",
+            "۲۹۱": "emote-dazzle",
+            "۲۹۲": "emote-brilliant",
+            "۲۹۳": "emote-radiant",
+            "۲۹۴": "emote-glowing",
+            "۲۹۵": "emote-luminous",
+            "۲۹۶": "emote-vibrant",
+            "۲۹۷": "emote-energetic",
+            "۲۹۸": "emote-dynamic",
             "zombie": "idle_zombie",
             "relaxed": "idle_layingdown2",
             "attentive": "idle_layingdown",
@@ -1220,10 +1370,8 @@ class AdvancedBot(BaseBot):
 
             if msg_lower in self.emotes:
                 await self.start_dance(user, self.emotes[msg_lower])
-            elif msg_lower == "stop":
+            elif msg_lower in ["stop", "استوپ"]:
                 await self.stop_dance(user)
-            elif msg_lower.startswith("!find"):
-                await self.cmd_find_emote(user, msg.split())
             elif msg_lower.startswith("!"):
                 parts = msg.split()
                 parts_lower = [p.lower() for p in parts]
@@ -2458,89 +2606,6 @@ class AdvancedBot(BaseBot):
         except Exception as e:
             await self.highrise.chat(f"خطا در توقف رقص برای @{target_username}: {str(e)}")
             logger.error(f"خطا در cmd_partys برای {target_username}: {str(e)}")
-
-    async def cmd_find_emote(self, user: User, parts: list):
-        """دیتابیس ترکیبی (آفلاین + آنلاین) برای پیدا کردن ۱۰۰٪ تمام دنس‌های بازی بدون خطا"""
-        admins_lower = [admin.lower() for admin in self.config.get("admin_usernames", [])]
-        if user.username.lower() not in admins_lower:
-            return
-
-        if len(parts) < 2:
-            await self.highrise.chat("❌ راهنما: !find [اسم دنس]")
-            return
-
-        search_keyword = " ".join(parts[1:]).lower()
-        
-        # 👑 لایه اول: دیتابیس داخلی جامع از تمام دنس‌های پرکاربرد بازی
-        local_emotes = {
-            # حالت‌های استراحت، نشستن و خوابیدن
-            "Rest (استراحت پایه)": "emote-rest",
-            "Sit (نشستن معمولی)": "emote-sit",
-            "Lay (دراز کشیدن)": "emote-lay",
-            "Tired (خسته روی زمین)": "emote-tired",
-            "Sleepy (خواب‌آلود)": "emote-sleepy",
-            "Sleeping (خوابیدن روی شکم)": "emote-sleeping",
-            "Floor Sleep (خوابیدن کف زمین)": "emote-floorsleep",
-            "Dead (ولو شدن/بیهوش)": "emote-dead",
-            "Relax (ریلکس کردن)": "emote-relax",
-            "Meditation (مدیتیشن)": "emote-meditation",
-            
-            # انواع رقص‌ها (Dances)
-            "Floss Dance (رقص فلاس)": "dance-floss",
-            "Savage Dance (رقص سوج)": "dance-tiktok2",
-            "Don't Start Now (تیک‌تاک)": "dance-tiktok8",
-            "Say So Dance (رقص سی سو)": "dance-tiktok9",
-            "Russian Dance (رقص روسی)": "dance-russian",
-            "Pennywise Dance (پنی‌وایز)": "dance-pennywise",
-            "Shopping Cart (رقص خرید)": "dance-shoppingcart",
-            "Macarena (ماکارنا)": "dance-macarena",
-            "Weird Dance (رقص عجیب)": "dance-weird",
-            "Hands in the Air (دست‌ها بالا)": "dance-handsintheair",
-            "Blackpink (بلک‌پینک)": "dance-blackpink",
-            
-            # ری‌اکشن‌ها و ژست‌ها
-            "Wave (دست تکان دادن)": "emote-wave",
-            "Laugh (خندیدن شدید)": "emote-laughing",
-            "Cry (گریه کردن)": "emote-crying",
-            "Heart Fingers (قلب با انگشت)": "emote-heartfingers",
-            "Blow Kiss (بوس فرستادن)": "emote-kiss",
-            "Clap (دست زدن)": "emote-clap",
-            "Wink (چشمک زدن)": "emote-wink",
-            "Shy (خجالتی)": "emote-shy",
-            "Confused (گیج شدن)": "emote-confused",
-            "Facepalm (دست روی پیشانی)": "emote-facepalm",
-            "Hot (گرمازدگی/جذاب)": "emote-hot",
-            "Bow (تعظیم کردن)": "emote-bow"
-        }
-
-        found_emotes = []
-        
-        # ابتدا در دیتابیس داخلی جستجو میکند
-        for title, emote_id in local_emotes.items():
-            if search_keyword in title.lower() or search_keyword in emote_id.lower():
-                found_emotes.append(f"{title}: {emote_id}")
-
-        # لایه دوم: اگر در دیتابیس داخلی نبود، به سرور مرکزی وصل می‌شود
-        if not found_emotes:
-            try:
-                async with aiohttp.ClientSession() as session:
-                    async with session.get("https://webapi.highrise.game/emotes?limit=1000") as response:
-                        if response.status == 200:
-                            data = await response.json()
-                            emotes_list = data.get("emotes", [])
-                            for emote in emotes_list:
-                                t = emote.get("title", "") if isinstance(emote, dict) else getattr(emote, "title", "")
-                                e_id = emote.get("id", "") if isinstance(emote, dict) else getattr(emote, "id", "")
-                                if e_id and (search_keyword in t.lower() or search_keyword in e_id.lower()):
-                                    found_emotes.append(f"{t}: {e_id}")
-            except Exception as e:
-                logger.error(f"خطا در سرچ آنلاین: {e}")
-
-        # نمایش نتایج نهایی
-        if found_emotes:
-            await self.highrise.chat("📌 نتایج یافت شده:\n" + "\n".join(found_emotes[:5]))
-        else:
-            await self.highrise.chat(f"❌ هیچ دنسی با کلمه '{search_keyword}' پیدا نشد!")
 
     async def cmd_loopchat(self, user: User, parts: list):
         admins_lower = [admin.lower() for admin in self.config.get("admin_usernames", [])]

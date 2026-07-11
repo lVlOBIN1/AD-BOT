@@ -23,8 +23,8 @@ logger = logging.getLogger(__name__)
 # تنظیمات پیش‌فرض
 CONFIG_FILE = "bot_config.json"
 DEFAULT_CONFIG = {
-    "host_usernames": ["ad0ri"],
-    "admin_usernames": ["ad0ri"],
+    "host_usernames": ["lVlOBIN_1"],
+    "admin_usernames": ["lVlOBIN_1"],
     "vip_usernames": [],
     "banned_users": [],
     "teleport_locations": {
@@ -35,7 +35,7 @@ DEFAULT_CONFIG = {
     "language": "fa",
     "welcome_message": "✨ 🌟 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 {username} ❤️ 𝐆𝐥𝐚𝐝 𝐭𝐨 𝐡𝐚𝐯𝐞 𝐲𝐨𝐮 𝐡𝐞𝐫𝐞!\n🕺 𝐔𝐬𝐞 𝐍𝐮𝐦𝐛𝐞𝐫𝐬 (𝟏-𝟐𝟒𝟖) 𝐨𝐫 𝐄𝐦𝐨𝐭𝐞 𝐍𝐚𝐦𝐞𝐬 𝐭𝐨 𝐝𝐚𝐧𝐜𝐞!\n👑 𝐓𝐡𝐢𝐬 𝐛𝐨𝐭 𝐰𝐚𝐬 𝐜𝐫𝐞𝐚𝐭𝐞𝐝 & 𝐝𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐝 𝐛𝐲 @𝐚𝐝𝟎𝐫𝐢 😉\n📺 𝐒𝐮𝐛𝐬𝐜𝐫𝐢𝐛𝐞 𝐭𝐨 𝐨𝐮𝐫 𝐘𝐨𝐮𝐓𝐮𝐛𝐞: @𝐚𝐝𝐨𝐫𝐢_𝐡𝐢𝐭𝐨𝐭𝐬𝐨 🚀",
     "announcement_interval": 300,
-    "announcement_message": "برای اجاره بات به آیدی @ad0ri پیام دهید!"
+    "announcement_message": ""
 }
 
 class AdvancedBot(BaseBot):
@@ -2720,8 +2720,8 @@ async def main():
         logger.error("ROOM_ID یا API_TOKEN تنظیم نشده‌اند.")
         return
     
-    logger.info(f"ROOM_ID: {room_id}")
-    logger.info(f"API_TOKEN: {api_token}")
+    logger.info(f"ROOM_ID: {6a3e1f4658f3ffb1576b410a}")
+    logger.info(f"API_TOKEN: {46ae8cd40718fb3cbb8e1f9715807346702bf2234255fa6568db71c9395ffab9}")
 
     # ساختار وب‌سرور داخلی و سبک پایتون
     class PingHandler(BaseHTTPRequestHandler):
